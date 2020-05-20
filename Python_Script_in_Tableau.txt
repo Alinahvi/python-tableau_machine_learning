@@ -1,0 +1,9 @@
+SCRIPT_REAL("
+   from nltk.sentiment.vader import SentimentIntensityAnalyzer
+   analyzer = SentimentIntensityAnalyzer()
+   sa = []
+   for i in range(0, len(_arg1)):
+        a = analyzer.polarity_scores(_arg1[i])['compound']
+        sa.append(a)
+   return sa
+",ATTR([Comments]))
